@@ -1,0 +1,110 @@
+body {
+    background-color: #424549;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    overflow: scroll;
+}
+
+.header {
+    background-color: #36393e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 4px black solid;
+}
+
+.headertext {
+    color: rgb(224, 224, 224);
+    font-size: 35pt;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+
+.mainpage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: block;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 30px;
+    display: flex;
+}
+
+.tdbox {
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: auto;
+}
+
+.mainpage a {
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+    margin: auto;
+}
+
+.mainpage .stylerandomperson {
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+
+.tdbox {
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+}
+
+.resultclass {
+    text-align: center;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0%;
+}
+
+.truth {
+    text-align: center;
+    margin: auto;
+    background-color: #1abd15;
+    border: 2px black solid;
+    border-radius: 30px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.dare {
+    text-align: center;
+    margin: auto;
+    background-color: #c41414;
+    border: 2px black solid;
+    border-radius: 30px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}

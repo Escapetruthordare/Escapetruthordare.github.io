@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+    <h class="headertext">Truth or Dare</h>
+</div>
+
+<div class="tdbox">
+    <t class="truth" id="truthButton">Truth</t>
+    <t class="dare" id="dareButton">Dare</t>
+</div>
+
+<div class="resultclass" id="resultid">
+</div>
+
+<div class="mainpage">
+    <ul>
+        <li><t class="stylerandomperson" href="index.html" id="randompersonid">Pick Random Person</t></li>
+        <!-- <li><a href="index.html">Back to Menu</a></li> -->
+    </ul>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+
+
+    // Truth
+    var randomStringsTruth = [
+        "Tell me about your most awkward/worst date",
+        "What is the most embarrassing picture of you?",
+        "What is the most expensive thing you have stolen",
+        "What terrible thing have you done that you lied to cover up?",
+        "What is the silliest thing you have an emotional attachment to?",
+        "What do you really hope your parents never find out about?",
+        "what are you stats out of 10",
+        "Weirdest place you've peed / Best pee spot",
+        "What's your relationship dealbreaker?",
+        "What's your biggest insecurity (or two dares)",
+        "What's your worst habit?",
+        "What's the worst date you've been on?",
+        "What's the biggest misconception about you?",
+        "Where's the weirdest place you've had sex?",
+        "Do you have a favourite friend?",
+        "What's the strangest rumour you've heard about yourself?",
+        "What's your biggest turn off?",
+        "What's your biggest turn on?",
+        "What gives you the ick?",
+        "Who do you think is the worst-dressed person in this room?",
+        "Tell me about your first kiss",
+        "If you could be one celebrity for a day, who would it be?",
+        "What's been your most physically painful experience?",
+        "What is your last amazon purchase",
+        "Who would you hate to see naked?",
+        "If you had to pick someone in this room to be your partner on a game show, who would it be and why?",
+        "What's one thing in your life you wish you could change?",
+        "How many people have you kissed?",
+        "What's the scariest thing that's ever happened to you?",
+        "If a genie granted you three wishes, what would you ask for and why?s",
+        "If you were handed $3,000 right now, what would you spend it on?",
+        "If you could trade lives with anyone who would it be and why",
+        "Have you ever cried to a movie",
+        "Have you ever cried to a song",
+        "Your most embarrassing moment with member of the preferred sex",
+        "Have you ever stalked anyone on social media",
+        "Whats the last thing in your search history",
+        "What's the last thing you Googled?",
+        "Whos your favourite person present",
+        "Whats the last youtube video you watched",
+        "What is the hardest drug you have done",
+        "Your lover has been magically transformed into an animal, and the only way to restore your lover is to mate with them. Here's the question: Which animal would cause you the least psychological damage?",
+
+    ];
+
+    // Dare
+    var randomStrings = [
+        "Say the surname name of everyone present, take a shot of at least 30% alcohol for every name you cannot get up to 3",
+        "Talk in an accent or different language for the next 3 rounds",
+        "Let the group look through one app on your phone for 30 seconds",
+        "Switch clothes with a random person in the group for three rounds",
+        "Get slapped on the face by the person of your choosing",
+        "Let one random person make a shot for you",
+        "Swap sleeping positions with one random person excluding morgan and people not present",
+        "Open a bag of snacks or candy using only your mouth",
+        "Let a random person tickle you for 15 seconds and try not to laugh if you laugh take a shot",
+        "Let julia do your makeup",
+        "Wear morgans maid outfit until your next turn",
+        "Eat a spoonful of a condiment of your choice",
+        "Do 30 squats, or do 10 pushups",
+        "Keep an ice cube in your mouth til it melts",
+        "Yell out the first word that comes to your mind",
+        "Swap one piece of clothing with a random person chosen by them",
+        "Keep your eyes closed until it's your go again",
+        "Eat a snack without using your hands",
+        "Let another person in the group touch up your makeup",
+        "Let a random person paint your nails a colour of thier choice",
+        "Down your drink (irresponsibly)",
+        "Try and make yourself cry in front of the group",
+        "Let a person go through your instagram follows",
+        "Hold your drink with two hands and dont let go until your next turn",
+        "Handcuff yourself to a random person",
+        "Neck the drink (irresponsibly) of a random person",
+        "You cant speak til your next turn",
+        "Show the last picture on your camera excluding pictures taken tonight (excluding screenshots)",
+        "Let someone draw on you with marker",
+        "Put on a blindfold and touch the other players' faces until you can figure out who's who.",
+        "Show a picture of your ex",
+    ];
+
+    // Random Person
+    var randomStringsPerson = [
+        "David",
+        "Rhiannon",
+        "Olly",
+        "Yousaf",
+        "Sebastian",
+        "Morgan",
+        "Julia",
+        "Kiera",
+        "Sam",
+        "Alex",
+        "Anabel",
+        "Erminas",
+        "Cara",
+        "Quimey",
+        "Extra name just in case",
+        "Person to your left",
+        "Person to your right",
+        "Person across from you",
+    ];
+
+    var randomDiv = document.getElementById("resultid");
+
+    document.getElementById("dareButton").addEventListener("click", function() {
+          randomIndex = Math.ceil((Math.random()*randomStrings.length-1));
+          newText = randomStrings[randomIndex];
+          randomDiv.innerHTML = newText;  
+        document.getElementById("resultid").style.opacity = "100%";
+        document.getElementById("resultid").style.transition = "0.25s";
+        document.getElementById("resultid").style.background = "#c41414";
+        document.getElementById("resultid").style.color = "white";
+
+    });
+
+    var randomDiv = document.getElementById("resultid");
+
+    document.getElementById("truthButton").addEventListener("click", function() {
+      randomIndex = Math.ceil((Math.random()*randomStringsTruth.length-1));
+      newText = randomStringsTruth[randomIndex];
+      randomDiv.innerHTML = newText;  
+    document.getElementById("resultid").style.opacity = "100%";
+    document.getElementById("resultid").style.transition = "0.25s";
+    document.getElementById("resultid").style.background = "#1abd15";
+    document.getElementById("resultid").style.color = "white";
+
+    });
+
+var randomDiv = document.getElementById("resultid");
+
+    document.getElementById("randompersonid").addEventListener("click", function() {
+          randomIndex = Math.ceil((Math.random()*randomStringsPerson.length-1));
+          newText = randomStringsPerson[randomIndex];
+          randomDiv.innerHTML = newText;  
+        document.getElementById("resultid").style.opacity = "100%";
+        document.getElementById("resultid").style.transition = "0.25s";
+        document.getElementById("resultid").style.background = "white";
+        document.getElementById("resultid").style.color = "black";
+
+    });
+</script> 
+</body>
+</html>
